@@ -1,1 +1,27 @@
 ---
+core-rtr:
+  hosts:
+    core-rtr01
+
+dist-rtr:
+  hosts:
+    dist-rtr[01-02]
+
+dist-sw:
+  hosts:
+    dist-sw[01-02]
+
+a4n-rtr:
+  children:
+    core-rtr:
+    dist-rtr:
+
+a4n-sw:
+  children:
+    dist-sw:
+
+a4n-net:
+  children:
+    a4n-rtr:
+    a4n-sw:
+    
