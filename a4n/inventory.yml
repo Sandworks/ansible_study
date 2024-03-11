@@ -1,31 +1,27 @@
 ---
 core-rtr:
   hosts:
-    core-rtr01
+    core-rtr01:
       ansible_host: 10.10.20.173
-
 dist-rtr:
   hosts:
-    dist-rtr01
+    dist-rtr01:
       ansible_host: 10.10.20.175
-    dist-rtr02
+    dist-rtr02:
       ansible_host: 10.10.20.176
-
 dist-sw:
   hosts:
-    dist-sw01
+    dist-sw01:
       ansible_host: 10.10.20.177
-    dist-sw02
+    dist-sw02:
       ansible_host: 10.10.20.178
 a4n-rtr:
   children:
     core-rtr:
     dist-rtr:
-
 a4n-sw:
   children:
     dist-sw:
-
 a4n-net:
   children:
     a4n-rtr:

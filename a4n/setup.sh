@@ -8,9 +8,19 @@ success () {
     printf "$STARTCOLOR%b$ENDCOLOR" "done\n";
 }
 
+echo "Deactivate Environment"
+printf "Deactivate Environment"
+deactivate
+success
+
 echo "Uninstall Ansible"
 printf "Uninstall Ansible"
 sudo pip uninstall ansible==2.9.4 -y
+success
+
+echo " Activate Environment"
+printf "Activate Environment"
+source py3venv/bin/activate
 success
 
 echo "Install Ansible 3.0"
@@ -34,17 +44,17 @@ printf "Install Python Netaddr"
 pip install netaddr
 success
 
-echo "Git Clone my_project"
-printf "Git Clone my_project"
-cd ~
-git clone https://gitlab.com/${gitlab_user}/my_project.git
-success
+#echo "Git Clone my_project"
+#printf "Git Clone my_project"
+#cd ~
+#git clone https://gitlab.com/${gitlab_user}/my_project.git
+#success
 
 echo "Configure GIT"
 printf "Configure GIT"
 cd ~
 git config --global user.name ${gitlab_user}
-git config --global user.email "you@example.com"
+git config --global user.email "ciscoguru72@yahoo.com.au"
 success
 
 echo "Install NXOS Collection"
@@ -57,8 +67,8 @@ printf "Install IOS Collection"
 ansible-galaxy collection install cisco.ios
 success
 
-echo "Verify my_project is present"
-printf "Verify my_project is present"
+echo "Verify ansible_study is present"
+printf "Verify ansible_study is present"
 cd ~
-tree my_project
+tree ansible_study
 success
