@@ -1,0 +1,13 @@
+---
+- name: configure VLANs
+  hosts: a4n-sw
+
+  tasks:
+  - name: VLANs task
+    cisco.nxos.nxos_vlans:
+      config:
+      - vlan_id: 5
+        name: a4n_web
+      - vlan_id: 10
+        name: a4n_db
+
