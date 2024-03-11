@@ -53,7 +53,7 @@ success
 echo "Configure GIT"
 printf "Configure GIT"
 cd ~
-git config --global user.name ${gitlab_user}
+git config --global user.name ${github_user}
 git config --global user.email "ciscoguru72@yahoo.com.au"
 success
 
