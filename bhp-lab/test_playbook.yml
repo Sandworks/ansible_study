@@ -1,0 +1,16 @@
+---
+- name: a simple playbook to test it's function
+  hosts: ios
+  gather_facts: no
+
+  tasks:
+  - name: gather information from devices
+    cisco.ios.ios_command:
+      commands: show version
+    register: output
+
+#  - name: display information
+#    debug:
+#      msg: "{{ output.stdout_lines }}"
+
+    

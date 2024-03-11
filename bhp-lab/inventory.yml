@@ -1,0 +1,26 @@
+devnet:
+  children:
+    ios:
+    nxos:
+
+ios:
+  hosts:
+    c9500_IOSXE:
+      ansible_host: 10.239.5.112
+    c9300_IOSXE:
+      ansible_host: 10.239.5.114
+  vars:
+    ansible_connection: ansible.netcommon.network_cli
+    ansible_user: admin
+    ansible_password: cisco
+    ansible_network_os: cisco.ios.ios
+
+nxos:
+  hosts:
+    n9000_NXOS 
+  vars:
+    ansible_connection: ansible.netcommon.network_cli
+    ansible_user: admin
+    ansible_password: cisco
+    ansible_network_os: cisco.nxos.nxos
+
