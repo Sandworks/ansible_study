@@ -9,8 +9,8 @@
       commands: show version
     register: output
 
-#  - name: display information
-#    debug:
-#      msg: "{{ output.stdout_lines }}"
+  - name: display information
+    debug:
+      msg: "{{ output.stdout_lines }}"
 
     

@@ -3,13 +3,14 @@ ansible-navigator:
   ansible:
     inventory:
       entries:
-      - /home/ansible/ansible_study/bhp-lab/inventory.yml
+      - /home/ansible_study/bhp-lab/inventory.yml
   execution-environment:
-    container-engine: podman
-    enabled: true
-    image: registry.gitlab.com/tdubiel1/network-ee:latest
+    enabled: false
+    image: localhost/my_first_ee:latest
     pull:
-      policy: missing
+      arguments:
+        - "--tls-verity=false"
+      policy: never
   logging:
     level: debug
   playbook-artifact:

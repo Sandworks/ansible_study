@@ -1,0 +1,16 @@
+---
+ansible-navigator:
+  ansible:
+    inventory:
+      entries:
+      - /home/ansible/ansible_study/bhp-lab/inventory.yml
+  execution-environment:
+    container-engine: podman
+    enabled: true
+    image: registry.gitlab.com/tdubiel1/network-ee:latest
+    pull:
+      policy: missing
+  logging:
+    level: debug
+  playbook-artifact:
+    save-as: /home/{playbook_name}-artifact-{time_stamp}.json

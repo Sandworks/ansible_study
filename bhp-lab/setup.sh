@@ -32,7 +32,7 @@ success
 echo "Configure GIT"
 printf "Configure GIT"
 cd ~
-git config --global user.name "Sandworks"
+git config --global user.name "sandworks"
 git config --global user.email "ciscoguru72@yahoo.com.au"
 success
 
@@ -48,6 +48,6 @@ success
 
 echo "Verify ansible_study is present"
 printf "Verify ansible_study is present"
-cd ~
-tree ansible_study
+cd /home/ansible_study/bhp-lab
+tree
 success

@@ -1,0 +1,17 @@
+---
+version: 1
+
+dependencies:
+  galaxy: requirements.yml
+  python: requirements.txt
+  #system: bindep.txt
+
+#ansible_config: 'ansible.cfg'
+
+additional_build_steps:
+  prepend:
+    RUN yum update -y
+    RUN pip3 install --upgrade pip setuptools
+  append:
+    - RUN ls -al /etc
+
